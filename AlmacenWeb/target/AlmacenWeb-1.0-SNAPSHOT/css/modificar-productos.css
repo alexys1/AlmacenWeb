@@ -1,0 +1,276 @@
+/* ==== CONTENEDOR PRINCIPAL ==== */
+.modificar-productos-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ==== TÍTULO ==== */
+.modificar-productos-wrapper h1 {
+    text-align: center;
+    color: #0d6efd;
+    font-size: 26px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 10px;
+}
+
+/* ==== FORMULARIO DE BÚSQUEDA ==== */
+.form-busqueda {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.form-busqueda input,
+.form-busqueda select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #0d6efd;
+    border-radius: 6px;
+    width: 220px;
+    transition: box-shadow 0.2s;
+}
+
+.form-busqueda input:focus,
+.form-busqueda select:focus {
+    outline: none;
+    box-shadow: 0 0 5px #0d6efd55;
+}
+
+.form-busqueda button {
+    padding: 10px 18px;
+    background-color: #0d6efd;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-busqueda button:hover {
+    background-color: #0b5ed7;
+}
+
+/* ==== TABLA DE PRODUCTOS ==== */
+.tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+}
+
+.tabla-productos table {
+    width: 100%;
+    min-width: 600px;
+}
+
+.tabla-productos th,
+.tabla-productos td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+.tabla-productos th {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.tabla-productos tr:hover {
+    background-color: #f2f9ff;
+}
+
+/* ==== BOTÓN EDITAR ==== */
+.btn-editar {
+    background-color: #ffc107;
+    color: #000;
+    padding: 6px 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.btn-editar:hover {
+    background-color: #e0a800;
+}
+
+/* ==== INPUT DENTRO DE CELDA ==== */
+.input-tabla {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.input-tabla:focus {
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 5px #0d6efd88;
+}
+
+/* ==== MENSAJE VACÍO ==== */
+.mensaje-vacio {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    margin-top: 30px;
+}
+
+/* ==== FORMULARIOS EN CELDAS ==== */
+.tabla-productos form {
+    display: contents;
+}
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media screen and (max-width: 768px) {
+    .modificar-productos-wrapper {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .modificar-productos-wrapper h1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .form-busqueda {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-busqueda input,
+    .form-busqueda select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tabla-productos {
+        font-size: 13px;
+    }
+
+    .tabla-productos th:nth-child(1),
+    .tabla-productos td:nth-child(1) {
+        display: none; /* Oculta ID en móvil */
+    }
+
+    .tabla-productos th,
+    .tabla-productos td {
+        padding: 10px 8px;
+    }
+
+    .btn-editar {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .input-tabla {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .modificar-productos-wrapper {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .modificar-productos-wrapper h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-busqueda {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-busqueda input,
+    .form-busqueda select {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .tabla-productos {
+        font-size: 14px;
+        border: none;
+        width: 100%;
+         display: flex;
+    flex-direction: column;
+    align-items: center;  /* ✅ esto centra el contenido (los tr) */
+    width: 100%;
+    }
+
+    .tabla-productos thead {
+        display: none;
+    }
+
+   .tabla-productos tr {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;  /* 📌 que los inputs llenen el contenedor */
+    justify-content: center;
+    margin: 20px auto;      /* 📌 centra horizontalmente */
+    background-color: #f9f9f9;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    max-width: 420px;       /* 📌 limita el ancho como mostraste en la caja roja */
+    width: 100%;            /* 📌 asegura que use todo el espacio disponible dentro del límite */
+}
+
+
+    .tabla-productos td {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 6px 0;
+        text-align: left;
+        border: none;
+    }
+
+    .tabla-productos td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #0d6efd;
+        margin-bottom: 4px;
+    }
+
+    .tabla-productos td input,
+    .tabla-productos td select {
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .tabla-productos td.accion-btn {
+        align-items: center;
+        text-align: center;
+        padding-top: 14px;
+    }
+
+    .btn-editar {
+        width: 100%;
+        max-width: 220px;
+        font-size: 15px;
+    }
+}
+
