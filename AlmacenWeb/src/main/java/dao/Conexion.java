@@ -5,17 +5,20 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexion {
-    private static final String URL = "jdbc:mysql://localhost:3306/almacen_db";
-    private static final String USER = "root"; // Cambia si usas otro usuario
-    private static final String PASSWORD = "258456"; // Si tu MySQL tiene contraseña, ponla aquí
 
     public static Connection getConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection(URL, USER, PASSWORD);
+
+            String url = System.getenv("shuttle.proxy.rlwy.net:50400/railway");       // jdbc:mysql://shuttle.proxy.rlwy.net:50400/railway
+            String user = System.getenv("root");     // root
+            String password = System.getenv("ibVatInrgYnmvYscbZtkxPsNKJKBXpxn"); // tu contraseña real
+
+            return DriverManager.getConnection(url, user, password);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
             return null;
         }
     }
 }
+
