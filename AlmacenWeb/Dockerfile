@@ -1,10 +1,9 @@
-# Imagen oficial de Tomcat 10 con Java 17
-FROM tomcat:10.1.40-jdk17-temurin
+FROM tomcat:10.1-jdk17
 
-# Elimina aplicaciones por defecto
-RUN rm -rf /usr/local/tomcat/webapps/*
+RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
-# Copia tu archivo WAR al servidor Tomcat
-COPY target/AlmacenWeb-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
+# Cambia la ruta según tu estructura
+COPY AlmacenWeb/target/AlmacenWeb-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
+
 
 
