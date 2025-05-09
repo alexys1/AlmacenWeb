@@ -10,9 +10,13 @@ public class Conexion {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            String url = System.getenv("shuttle.proxy.rlwy.net:50400/railway");       // jdbc:mysql://shuttle.proxy.rlwy.net:50400/railway
-            String user = System.getenv("root");     // root
-            String password = System.getenv("ibVatInrgYnmvYscbZtkxPsNKJKBXpxn"); // tu contraseña real
+            String host = System.getenv("DB_HOST");
+            String port = System.getenv("DB_PORT");
+            String dbName = System.getenv("DB_NAME");
+            String user = System.getenv("DB_USER");
+            String password = System.getenv("DB_PASSWORD");
+
+            String url = "jdbc:mysql://" + host + ":" + port + "/" + dbName + "?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 
             return DriverManager.getConnection(url, user, password);
         } catch (ClassNotFoundException | SQLException e) {
