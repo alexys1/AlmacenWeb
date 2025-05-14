@@ -104,3 +104,21 @@ document.addEventListener("DOMContentLoaded", function () {
     if (selectCategoria) selectCategoria.addEventListener("change", filtrarModificarProductos);
     
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const formBusqueda = document.getElementById("form-busqueda");
+    const categoriaSelect = document.getElementById("categoriaIdSelect");
+    const inputNombre = document.querySelector('input[name="nombre"]');
+    const btnReset = document.querySelector(".btn-reset");
+
+    if (categoriaSelect && formBusqueda) {
+        categoriaSelect.addEventListener("change", function () {
+            formBusqueda.submit(); // 🔄 reenviar al cambiar de categoría
+        });
+    }
+
+    if (btnReset && inputNombre) {
+        btnReset.addEventListener("click", function () {
+            inputNombre.value = "";
+        });
+    }
+});
