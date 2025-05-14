@@ -81,3 +81,54 @@
 .buscar-productos-wrapper tr:hover {
     background-color: #f1f1f1;
 }
+@media screen and (max-width: 768px) {
+  .tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .tabla-productos th,
+  .tabla-productos td {
+    font-size: 12px;
+    padding: 6px 4px;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  .tabla-productos th:nth-child(1),
+  .tabla-productos td:nth-child(1) {
+    display: none; /* Opcional: ocultar la columna ID */
+  }
+
+   .tabla-productos .col-id {
+    display: none;
+  }
+  .form-busqueda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* espacio entre los campos */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .form-busqueda input,
+  .form-busqueda select,
+  .form-busqueda button {
+    width: 90%;
+    max-width: 400px;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .form-busqueda .btn-reset {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+}
