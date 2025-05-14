@@ -8,3 +8,5 @@ nb-configuration.xml
 **/.DS_Store
 **/target/*.jar
 
+dockerignore-error.txt
+.dockerignore
