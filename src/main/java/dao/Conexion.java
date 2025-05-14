@@ -5,16 +5,22 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexion {
-    private static final String URL = "jdbc:mysql://localhost:3306/almacen_db";
-    private static final String USER = "root"; // Cambia si usas otro usuario
-    private static final String PASSWORD = "258456"; // Si tu MySQL tiene contraseña, ponla aquí
 
     public static Connection getConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection(URL, USER, PASSWORD);
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+
+            String host = System.getenv("DB_HOST");
+            String port = System.getenv("DB_PORT");
+            String db = System.getenv("DB_NAME");
+            String user = System.getenv("DB_USER");
+            String password = System.getenv("DB_PASSWORD");
+
+            String url = "jdbc:mysql://" + host + ":" + port + "/" + db + "?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+            return DriverManager.getConnection(url, user, password);
+        } catch (Exception e) {
+            System.out.println("❌ Error de conexión a la base de datos:");
+            e.printStackTrace(); // IMPORTANTE: muestra el error exacto en Render
             return null;
         }
     }
