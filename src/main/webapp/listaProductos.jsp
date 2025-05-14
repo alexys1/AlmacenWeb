@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Lista de Productos</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css"/>
@@ -91,37 +91,43 @@
         %>
 
         <!-- TABLA DE PRODUCTOS -->
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Precio Compra</th>
-                <th>Precio Mayor</th>
-                <th>Precio Unidad</th>
-            </tr>
-            <%
-                List<Producto> productos = (List<Producto>) request.getAttribute("productos");
-                if (productos != null && !productos.isEmpty()) {
-                    for (Producto p : productos) {
-            %>
-            <tr>
-                <td ><%= p.getId() %></td>
-                <td><%= p.getNombre() %></td>
-                <td><%= p.getPrecioCompra() %></td>
-                <td><%= p.getPrecioMayor() %></td>
-                <td><%= p.getPrecioUnidad() %></td>
-            </tr>
-            <%
-                    }
-                } else {
-            %>
-            <tr>
-                <td colspan="5">No hay productos para mostrar.</td>
-            </tr>
-            <%
-                }
-            %>
-        </table>
+        <table class="tabla-productos">
+    <thead>
+    <tr>
+        <th class="col-id">ID</th>
+        <th>Nombre</th>
+        <th>Precio Compra</th>
+        <th>Precio Mayor</th>
+        <th>Precio Unidad</th>
+    </tr>
+</thead>
+<tbody>
+    <%
+        List<Producto> productos = (List<Producto>) request.getAttribute("productos");
+        if (productos != null && !productos.isEmpty()) {
+            for (Producto p : productos) {
+    %>
+    <tr>
+        <td class="col-id" data-label="ID"><%= p.getId() %></td>
+        <td data-label="Nombre"><%= p.getNombre() %></td>
+        <td data-label="Precio Compra"><%= p.getPrecioCompra() %></td>
+        <td data-label="Precio Mayor"><%= p.getPrecioMayor() %></td>
+        <td data-label="Precio Unidad"><%= p.getPrecioUnidad() %></td>
+    </tr>
+    <%
+            }
+        } else {
+    %>
+    <tr>
+        <td colspan="5">No hay productos para mostrar.</td>
+    </tr>
+    <%
+        }
+    %>
+</tbody>
+
+</table>
+
     </div>
      </div>
     <!-- PIE DE PÁGINA -->
@@ -130,6 +136,4 @@
     <script src="js.general.js" type="text/javascript"></script>
 </body>
 </html>
-
-
 
