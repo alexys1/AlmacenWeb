@@ -43,7 +43,8 @@ public class EliminarProductoServlet extends HttpServlet {
         } else {
             lista = dao.listarTodos();
         }
-
+ request.setAttribute("busqueda", nombre);
+        request.setAttribute("categoriaSeleccionada", categoriaIdStr);
         request.setAttribute("productos", lista);
         request.getRequestDispatcher("eliminarProducto.jsp").forward(request, response);
     }
