@@ -10,9 +10,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Eliminar Producto</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="css/eliminar-productos.css">
@@ -59,17 +59,21 @@
             <h1>Eliminar Producto</h1>
 
             <!-- FORMULARIO DE BÚSQUEDA -->
-            <form action="eliminar-producto" method="get" class="form-busqueda">
-                <input type="text" name="nombre" placeholder="Buscar por nombre...">
-                <select name="categoriaId">
-                    <option value="">-- Todas las categorías --</option>
-                    <option value="1">Sin Categoría</option>
-                    <option value="2">Categoría 1</option>
-                    <option value="3">Categoría 2</option>
-                </select>
-                <button type="submit">Buscar</button>
-                <button type="button" class="btn-reset" onclick="window.location.href='eliminar-producto'">🔄 Ver Todo</button>
-            </form>
+            <form action="eliminar-producto" method="get" class="form-busqueda" id="form-busqueda">
+    <input type="text" name="nombre" placeholder="Buscar por nombre..."
+           value="<%= request.getAttribute("busqueda") != null ? request.getAttribute("busqueda") : "" %>">
+
+    <select name="categoriaId" id="categoriaIdSelect">
+        <option value="">-- Todas las categorías --</option>
+        <option value="1" <%= "1".equals(request.getAttribute("categoriaSeleccionada")) ? "selected" : "" %>>Sin Categoría</option>
+        <option value="2" <%= "2".equals(request.getAttribute("categoriaSeleccionada")) ? "selected" : "" %>>Categoría 1</option>
+        <option value="3" <%= "3".equals(request.getAttribute("categoriaSeleccionada")) ? "selected" : "" %>>Categoría 2</option>
+    </select>
+
+    <button type="submit">Buscar</button>
+    <button type="button" class="btn-reset" onclick="window.location.href='eliminar-producto'">🔄 Ver Todo</button>
+</form>
+
 
             <!-- TABLA DE RESULTADOS (Siempre visible) -->
             <table class="tabla-productos">
