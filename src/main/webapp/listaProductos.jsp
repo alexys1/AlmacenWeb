@@ -11,6 +11,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Lista de Productos</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="css/buscar-productos.css">
