@@ -68,11 +68,41 @@
            value="<%= request.getAttribute("busqueda") != null ? request.getAttribute("busqueda") : "" %>">
 
     <select name="categoriaId" id="categoriaIdSelect">
-        <option value="">-- Todas las categorías --</option>
-        <option value="1" <%= "1".equals(request.getAttribute("categoriaSeleccionada")) ? "selected" : "" %>>Sin categoría</option>
-        <option value="2" <%= "2".equals(request.getAttribute("categoriaSeleccionada")) ? "selected" : "" %>>Categoría 1</option>
-        <option value="3" <%= "3".equals(request.getAttribute("categoriaSeleccionada")) ? "selected" : "" %>>Categoría 2</option>
-    </select>
+      
+    <option value="">-- Todas las categorías --</option>
+    <option value="1" <%= "1".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Sin Categoría</option>
+    <option value="2" <%= "2".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Papel</option>
+    <option value="3" <%= "3".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Pañales</option>
+    <option value="4" <%= "4".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Jabones</option>
+    <option value="5" <%= "5".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Pasta dental</option>
+    <option value="6" <%= "6".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Cepillos</option>
+    <option value="7" <%= "7".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Champu</option>
+    <option value="8" <%= "8".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Desodorante</option>
+    <option value="9" <%= "9".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Toallas higiénicas</option>
+    <option value="10" <%= "10".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Detergente</option>
+    <option value="11" <%= "11".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Lejia</option>
+    <option value="12" <%= "12".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Limpia todo</option>
+    <option value="13" <%= "13".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Lavavajilla</option>
+    <option value="14" <%= "14".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Enjuague</option>
+    <option value="15" <%= "15".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Quitagrasa</option>
+    <option value="16" <%= "16".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Quitamanchas</option>
+    <option value="17" <%= "17".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Spray Sapolio</option>
+    <option value="18" <%= "18".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Menestras</option>
+    <option value="19" <%= "19".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Fideos</option>
+    <option value="20" <%= "20".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Harina</option>
+    <option value="21" <%= "21".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Leche</option>
+    <option value="22" <%= "22".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Yogurt</option>
+    <option value="23" <%= "23".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Mantequilla</option>
+    <option value="24" <%= "24".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Atunes</option>
+    <option value="25" <%= "25".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Condimentos</option>
+    <option value="26" <%= "26".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Gelatinas</option>
+    <option value="27" <%= "27".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Cafes y otros</option>
+    <option value="28" <%= "28".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Mayonesa y otros</option>
+    <option value="29" <%= "29".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Gaseosa</option>
+    <option value="30" <%= "30".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Alimento perro y otros</option>
+    <option value="31" <%= "31".equals(String.valueOf(request.getAttribute("categoriaSeleccionada"))) ? "selected" : "" %>>Platos y otros</option>
+</select>
+
 
     <button type="submit">Buscar</button>
     <button type="button" onclick="window.location.href='buscar-producto'" class="btn-reset">🔄 Ver Todo</button>
