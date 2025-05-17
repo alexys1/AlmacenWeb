@@ -67,8 +67,36 @@
 
                 <option value="">-- Todas las categorías --</option>
                 <option value="1">Sin Categoría</option>
-                <option value="2">Categoría 1</option>
-                <option value="3">Categoría 2</option>
+                 <option value="2">Papel</option>
+    <option value="3">Pañales</option>
+    <option value="4">Jabones</option>
+    <option value="5">Pasta dental</option>
+    <option value="6">Cepillos</option>
+    <option value="7">Champu</option>
+    <option value="8">Desodorante</option>
+    <option value="9">Toallas higiénicas</option>
+    <option value="10">Detergente</option>
+    <option value="11">Lejia</option>
+    <option value="12">Limpia todo</option>
+    <option value="13">Lavavajilla</option>
+    <option value="14">Enjuague</option>
+    <option value="15">Quitagrasa</option>
+    <option value="16">Quitamanchas</option>
+    <option value="17">Spray Sapolio</option>
+    <option value="18">Menestras</option>
+    <option value="19">Fideos</option>
+    <option value="20">Harina</option>
+    <option value="21">Leche</option>
+    <option value="22">Yogurt</option>
+    <option value="23">Mantequilla</option>
+    <option value="24">Atunes</option>
+    <option value="25">Condimentos</option>
+    <option value="26">Gelatinas</option>
+    <option value="27">Cafes y otros</option>
+    <option value="28">Mayonesa y otros</option>
+    <option value="29">Gaseosa</option>
+    <option value="30">Alimento perro y otros</option>
+    <option value="31">Platos y otros</option>
             </select>
             <button type="submit">Buscar</button>
             <button type="button" onclick="window.location.href='buscar-editar-producto'" class="btn-reset">🔄 Ver Todo</button>
