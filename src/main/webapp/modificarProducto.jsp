@@ -144,10 +144,39 @@
     </td>
     <td data-label="Categoría">
         <select name="categoriaId" class="input-tabla">
-            <option value="1" <%= p.getCategoriaId() == 1 ? "selected" : "" %>>Sin Categoría</option>
-            <option value="2" <%= p.getCategoriaId() == 2 ? "selected" : "" %>>Categoría 1</option>
-            <option value="3" <%= p.getCategoriaId() == 3 ? "selected" : "" %>>Categoría 2</option>
-        </select>
+    <option value="1" <%= p.getCategoriaId() == 1 ? "selected" : "" %>>Sin Categoría</option>
+    <option value="2" <%= p.getCategoriaId() == 2 ? "selected" : "" %>>Papel</option>
+    <option value="3" <%= p.getCategoriaId() == 3 ? "selected" : "" %>>Pañales</option>
+    <option value="4" <%= p.getCategoriaId() == 4 ? "selected" : "" %>>Jabones</option>
+    <option value="5" <%= p.getCategoriaId() == 5 ? "selected" : "" %>>Pasta dental</option>
+    <option value="6" <%= p.getCategoriaId() == 6 ? "selected" : "" %>>Cepillos</option>
+    <option value="7" <%= p.getCategoriaId() == 7 ? "selected" : "" %>>Champu</option>
+    <option value="8" <%= p.getCategoriaId() == 8 ? "selected" : "" %>>Desodorante</option>
+    <option value="9" <%= p.getCategoriaId() == 9 ? "selected" : "" %>>Toallas higienicas</option>
+    <option value="10" <%= p.getCategoriaId() == 10 ? "selected" : "" %>>Detergente</option>
+    <option value="11" <%= p.getCategoriaId() == 11 ? "selected" : "" %>>Lejia</option>
+    <option value="12" <%= p.getCategoriaId() == 12 ? "selected" : "" %>>Limpia todo</option>
+    <option value="13" <%= p.getCategoriaId() == 13 ? "selected" : "" %>>Lavavajilla</option>
+    <option value="14" <%= p.getCategoriaId() == 14 ? "selected" : "" %>>Enjuague</option>
+    <option value="15" <%= p.getCategoriaId() == 15 ? "selected" : "" %>>Quitagrasa</option>
+    <option value="16" <%= p.getCategoriaId() == 16 ? "selected" : "" %>>Quitamanchas</option>
+    <option value="17" <%= p.getCategoriaId() == 17 ? "selected" : "" %>>Spray Sapolio</option>
+    <option value="18" <%= p.getCategoriaId() == 18 ? "selected" : "" %>>Menestras</option>
+    <option value="19" <%= p.getCategoriaId() == 19 ? "selected" : "" %>>Fideos</option>
+    <option value="20" <%= p.getCategoriaId() == 20 ? "selected" : "" %>>Harina</option>
+    <option value="21" <%= p.getCategoriaId() == 21 ? "selected" : "" %>>Leche</option>
+    <option value="22" <%= p.getCategoriaId() == 22 ? "selected" : "" %>>Yogurt</option>
+    <option value="23" <%= p.getCategoriaId() == 23 ? "selected" : "" %>>Mantequilla</option>
+    <option value="24" <%= p.getCategoriaId() == 24 ? "selected" : "" %>>Atunes</option>
+    <option value="25" <%= p.getCategoriaId() == 25 ? "selected" : "" %>>Condimentos</option>
+    <option value="26" <%= p.getCategoriaId() == 26 ? "selected" : "" %>>Gelatinas</option>
+    <option value="27" <%= p.getCategoriaId() == 27 ? "selected" : "" %>>Cafes y otros</option>
+    <option value="28" <%= p.getCategoriaId() == 28 ? "selected" : "" %>>Mayonesa y otros</option>
+    <option value="29" <%= p.getCategoriaId() == 29 ? "selected" : "" %>>Gaseosa</option>
+    <option value="30" <%= p.getCategoriaId() == 30 ? "selected" : "" %>>Alimento perro y otros</option>
+    <option value="31" <%= p.getCategoriaId() == 31 ? "selected" : "" %>>Platos y otros</option>
+</select>
+
     </td>
     <td class="accion-btn" data-label="Acción">
         <button type="submit" class="btn-editar">💾 Guardar</button>
