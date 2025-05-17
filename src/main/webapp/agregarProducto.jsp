@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
     if (session.getAttribute("usuario") == null) {
         response.sendRedirect("login.jsp");
@@ -76,12 +77,11 @@
 
             <label>Categoría:</label>
             <select name="categoriaId" required>
-                <option value="">-- Seleccionar categoría --</option>
-                <option value="1">Sin Categoría</option>
-                <option value="2">Categoría 1</option>
-                <option value="3">Categoría 2</option>
-                <!-- Agrega más si deseas -->
-            </select>
+    <option value="">-- Seleccionar categoría --</option>
+    <c:forEach var="cat" items="${categorias}">
+        <option value="${cat.id}">${cat.nombre}</option>
+    </c:forEach>
+</select>
 
             <button type="submit">Guardar Producto</button>
         </form>
