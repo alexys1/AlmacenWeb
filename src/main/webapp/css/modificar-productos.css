@@ -138,7 +138,16 @@
 .tabla-productos form {
     display: contents;
 }
-
+.input-nombre {
+    width: 100%;
+    min-height: 40px;
+    resize: vertical; /* Permite al usuario ajustar altura si quiere */
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 8px;
+    white-space: pre-wrap; /* Permite que el texto largo salte de línea automáticamente */
+}
 /* ==== RESPONSIVE DESIGN ==== */
 @media screen and (max-width: 768px) {
     .modificar-productos-wrapper {
@@ -186,6 +195,7 @@
         padding: 6px;
     }
 }
+
 @media screen and (max-width: 600px) {
     .modificar-productos-wrapper {
         width: 95%;
