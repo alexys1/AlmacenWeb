@@ -131,7 +131,7 @@
         <input type="hidden" name="id" value="<%= p.getId() %>"><%= p.getId() %>
     </td>
     <td data-label="Nombre">
-        <input type="text" name="nombre" value="<%= p.getNombre() %>" class="input-tabla" required>
+        <textarea name="nombre" class="input-tabla input-nombre" required><%= p.getNombre() %></textarea>
     </td>
     <td data-label="Precio Compra">
         <input type="number" name="precioCompra" value="<%= p.getPrecioCompra() %>" step="0.01" class="input-tabla" required>
